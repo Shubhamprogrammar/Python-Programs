@@ -1,0 +1,139 @@
+import random
+
+option=["s","w","g"]
+
+print("Welcome to Snake, Water and Gun game")
+
+hp=0
+
+cp=0
+
+chance=11
+
+noofchoice=1
+
+print("\ns for Snake \nw for Water \ng for Gun")
+
+while noofchoice<11:
+
+    userinput=input("\t\ns , w , g\n")
+
+    computerinput=random.choice(option)
+
+    if userinput==computerinput:
+
+        print(f"Both have chosen the  same thing no points given to anyone in round {noofchoice}")
+
+        print("Your points are", hp)
+
+        print("Computer points are", cp)
+
+        noofchoice= noofchoice +1    
+
+    elif  userinput=="s" and computerinput=="w":
+
+        print(f"The snake will drink the water and you got win in round {noofchoice}")
+
+        hp = hp + 1
+
+        print("Your points are", hp)
+
+        print("Computer points are", cp)
+
+        noofchoice= noofchoice +1
+
+    elif   userinput=="s" and computerinput=="g":
+
+        print(f"The gun will shoot the snake and you got lose in round {noofchoice}")
+
+        cp= cp + 1
+
+        print("Your points are", hp)
+
+        print("Computer points are", cp)
+
+        noofchoice= noofchoice + 1
+
+    elif userinput=="w" and computerinput=="s":
+
+        print(f"The snake will drink the water and you got lose in round {noofchoice}")
+
+        cp = cp + 1
+
+        print("Your points are", hp)
+
+        print("Computer points are", cp)
+
+        noofchoice= noofchoice + 1
+
+    elif userinput=="w" and computerinput=="g":
+
+        print(f"The gun will float in water and you got win in round {noofchoice}")
+
+        hp = hp + 1
+
+        print("Your points are", hp)
+
+        print("Computer points are", cp)
+
+        noofchoice= noofchoice + 1
+
+    elif userinput=="g" and computerinput=="s":
+
+        print(f"The gun will kill snake and you got win in round {noofchoice}")
+
+        hp = hp + 1
+
+        print("Your points are", hp)
+
+        print("Computer points are", cp)
+
+        noofchoice= noofchoice + 1
+
+    elif userinput=="g" and computerinput=="w":
+
+        print(f"The gun will float in water and you got lose in round {noofchoice}")
+
+        cp = cp + 1
+
+        print("Your points are", hp)
+
+        print("Computer points are", cp)
+
+        noofchoice= noofchoice + 1
+
+    else:
+
+        print("It's Invalid input")
+
+        break
+
+print("\nThe result is announced")        
+
+print("Your total points are",hp)
+
+print("Computer points are",cp)
+
+if hp>cp:
+
+    print("You got win and computer got lose")
+
+elif hp<cp:
+
+    print("Computer got win and you got lose")
+
+else:
+
+    print("It's a tie, no one got win")
+
+    ()
+
+if noofchoice==chance:
+
+    print("Game Over")
+
+    
+
+if noofchoice==10:
+
+    quit()
